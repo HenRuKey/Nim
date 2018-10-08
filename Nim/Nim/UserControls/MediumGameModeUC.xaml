@@ -7,8 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
+<<<<<<< HEAD:Nim/Nim/MediumGameModeUC.xaml
+        <Image x:Name="R1C1" Source="IMG_4883[1617] TP2.png" HorizontalAlignment="Left" Height="112" Margin="329,30,0,0" VerticalAlignment="Top" Width="31" MouseDown="MediumR1C1_Click"/>
+        <Image x:Name="R1C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="112" Margin="398,30,0,0" VerticalAlignment="Top" Width="31" MouseDown="MediumR1C2_Click"/>
+        <Image x:Name="R2C1" Source="IMG_4883[1617] TP3.png" HorizontalAlignment="Left" Height="112" Margin="223,162,0,0" VerticalAlignment="Top" Width="31" MouseDown="MediumR2C1_Click"/>
+        <Image x:Name="R2C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="112" Margin="292,162,0,0" VerticalAlignment="Top" Width="31" MouseDown="MediumR2C2_Click"/>
+        <Image x:Name="R2C3" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="365,162,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR2C3_Click"/>
+        <Image x:Name="R2C4" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="432,162,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR2C4_Click"/>
+        <Image x:Name="R2C5" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="497,162,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR2C5_Click"/>
+        <Image x:Name="R3C1" Source="IMG_4883[1617] TP3.png" HorizontalAlignment="Left" Height="112" Margin="157,299,0,0" VerticalAlignment="Top" Width="31" MouseDown="MediumR3C1_Click"/>
+        <Image x:Name="R3C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="112" Margin="226,299,0,0" VerticalAlignment="Top" Width="31" MouseDown="MediumR3C2_Click"/>
+        <Image x:Name="R3C3" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="299,299,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR3C3_Click"/>
+        <Image x:Name="R3C4" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="366,299,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR3C4_Click"/>
+        <Image x:Name="R3C5" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="431,299,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR3C5_Click"/>
+        <Image x:Name="R3C6" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="500,299,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR3C6_Click"/>
+        <Image x:Name="R3C7" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="112" Margin="565,299,0,0" VerticalAlignment="Top" Width="32" MouseDown="MediumR3C7_Click"/>
+=======
         <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="451,10,0,0" FontFamily="Adumu" FontSize="70"/>
         <Label Content="Player 1 Name:" HorizontalAlignment="Left" Margin="170,640,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="839,638,0,0" VerticalAlignment="Top" Width="48" Height="48" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+>>>>>>> master:Nim/Nim/UserControls/MediumGameModeUC.xaml
         <Button Content="X" HorizontalAlignment="Left" Margin="959,10,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Close"/>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_EndTurn_Click"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_NewGame_Click"/>

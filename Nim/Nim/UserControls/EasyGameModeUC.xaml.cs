@@ -26,6 +26,36 @@ namespace Nim
             InitializeComponent();
         }
 
+        private void EasyR1C1_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void EasyR1C2_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void EasyR1C3_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void EasyR2C1_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void EasyR2C2_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void EasyR2C3_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
         private void btn_EndTurn_Click(object sender, RoutedEventArgs e)
         {
             window = getWindow();

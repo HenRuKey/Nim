@@ -75,6 +75,11 @@ namespace NimLibrary
 
         public void TakeTurn()
         {
+            //Check that at least one piece is selected
+            if (SelectedCount() == 0) {
+                return;
+            }
+
             //Remove selected pieces
             foreach (Pile pile in Piles) {
                 foreach (Piece piece in pile) {
@@ -83,16 +88,67 @@ namespace NimLibrary
                     }
                 }
             }
+
+            if (GameOver()) {
+                //TODO: Notify user
+                return;
+            }
+
+            //TODO: Change players
             
-            //if (GameOver()) {
-            //    //Notify user
-            //    return;
-            //}
+            //Computer's turn
+            if (player2.IsComputer /* && currentPlayer == player2*/) {
+                //Select pieces
+                RandomComp();
 
-            //Change players
+                //Remove selected pieces
+                foreach (Pile pile in Piles) {
+                    foreach (Piece piece in pile) {
+                        if (piece.IsSelected) {
+                            pile.Remove(piece);
+                        }
+                    }
+                }
 
-            if (player2.IsComputer) {
-                //Computer's turn?
+                if (GameOver()) {
+                    //TODO: Notify user
+                    return;
+                }
+
+                //TODO: Change players
+            }
+        }
+
+        private bool GameOver() {
+            foreach (Pile pile in Piles) {
+                if (pile.Count == 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private int SelectedCount() {
+            int count = 0;
+            foreach (Pile pile in Piles) {
+                foreach (Piece piece in pile) {
+                    if (piece.IsSelected) {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        private void RandomComp() {
+            Random random = new Random();
+            Pile selectedPile;
+            do {
+                selectedPile = Piles[random.Next(Piles.Count)];
+            } while (selectedPile.Count == 0);
+            int numberToTake = random.Next(1, selectedPile.Count);
+            for (int i = 0; i < numberToTake; i++) {
+                selectedPile[selectedPile.Count - 1 - i].IsSelected = true;
             }
         }
     }
