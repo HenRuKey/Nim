@@ -90,7 +90,6 @@ namespace NimLibrary
             }
 
             if (GameOver()) {
-<<<<<<< Updated upstream
                 //TODO: Notify user
                 return;
             }
@@ -120,37 +119,7 @@ namespace NimLibrary
             }
         }
 
-=======
-                //Notify user
-                return;
-            }
 
-            //Change players
-            
-            //Computer's turn
-            if (player2.IsComputer /* && currentPlayer == player2*/) {
-                //Select pieces
-                RandomComp();
-
-                //Remove selected pieces
-                foreach (Pile pile in Piles) {
-                    foreach (Piece piece in pile) {
-                        if (piece.IsSelected) {
-                            pile.Remove(piece);
-                        }
-                    }
-                }
-
-                if (GameOver()) {
-                    //Notify user
-                    return;
-                }
-
-                //Change players
-            }
-        }
-
->>>>>>> Stashed changes
         private bool GameOver() {
             foreach (Pile pile in Piles) {
                 if (pile.Count == 0) {
