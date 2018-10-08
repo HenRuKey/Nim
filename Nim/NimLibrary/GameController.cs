@@ -68,7 +68,25 @@ namespace NimLibrary
 
         public void TakeTurn()
         {
+            //Remove selected pieces
+            foreach (Pile pile in Piles) {
+                foreach (Piece piece in pile) {
+                    if (piece.IsSelected) {
+                        pile.Remove(piece);
+                    }
+                }
+            }
+            
+            //if (GameOver()) {
+            //    //Notify user
+            //    return;
+            //}
 
+            //Change players
+
+            if (player2.IsComputer) {
+                //Computer's turn?
+            }
         }
     }
 }
