@@ -5,13 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Nim"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
+<<<<<<< HEAD:Nim/Nim/EasyGameModeUC.xaml
         <Image x:Name="R1C1" Source="IMG_4883[1617] TP2.png" HorizontalAlignment="Left" Height="141" Margin="284,46,0,0" VerticalAlignment="Top" Width="39" MouseDown="EasyR1C1_Click"/>
         <Image x:Name="R1C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="141" Margin="371,46,0,0" VerticalAlignment="Top" Width="39" MouseDown="EasyR1C2_Click"/>
         <Image x:Name="R1C3" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="141" Margin="463,46,0,0" VerticalAlignment="Top" Width="40" MouseDown="EasyR1C3_Click"/>
         <Image x:Name="R2C1" Source="IMG_4883[1617] TP3.png" HorizontalAlignment="Left" Height="141" Margin="284,239,0,0" VerticalAlignment="Top" Width="39" MouseDown="EasyR2C1_Click"/>
         <Image x:Name="R2C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="141" Margin="371,239,0,0" VerticalAlignment="Top" Width="39" MouseDown="EasyR2C2_Click"/>
         <Image x:Name="R2C3" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="141" Margin="463,239,0,0" VerticalAlignment="Top" Width="40" MouseDown="EasyR2C3_Click"/>
+=======
+        <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="451,10,0,0" FontFamily="Adumu" FontSize="70"/>
+        <Label Content="Player 1 Name:" HorizontalAlignment="Left" Margin="170,640,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="839,638,0,0" VerticalAlignment="Top" Width="48" Height="48" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+>>>>>>> master:Nim/Nim/UserControls/EasyGameModeUC.xaml
     </Grid>
 </UserControl>

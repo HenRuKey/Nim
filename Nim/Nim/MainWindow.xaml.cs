@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nim.UserControls;
+using NimLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,69 +26,113 @@ namespace Nim
         string Difficulty = "Medium";
         SolidColorBrush selected = new SolidColorBrush(Color.FromRgb(161, 162, 163));
         SolidColorBrush unselected = new SolidColorBrush(Color.FromRgb(106, 119, 144));
-        PlayerNameGUI nameGUI = new PlayerNameGUI();
+        GameController game;
+
+
+
+        TitleScreen titleScreen = new TitleScreen();
+        NameSelect nameSelect = new NameSelect();
+        EasyGameModeUC easyGame = new EasyGameModeUC();
+        MediumGameModeUC mediumGame = new MediumGameModeUC();
+        HardGameModeUC hardGame = new HardGameModeUC();
         
 
         public MainWindow()
         {
             InitializeComponent();
-            btn_PvC.Background = selected;
-            btn_Medium.Background = selected;
+            mainWindow.Children.Add(titleScreen);
+            mainWindow.Children.Add(nameSelect);
+            mainWindow.Children.Add(easyGame);
+            mainWindow.Children.Add(mediumGame);
+            mainWindow.Children.Add(hardGame);
+            nameSelect.Visibility = Visibility.Hidden;
+            easyGame.Visibility = Visibility.Hidden;
+            mediumGame.Visibility = Visibility.Hidden;
+            hardGame.Visibility = Visibility.Hidden;
+            titleScreen.btn_PvC.Background = selected;
+            titleScreen.btn_Medium.Background = selected;
         }
 
-        private void GameMode_Click(object sender, RoutedEventArgs e)
+
+
+        public void GameMode_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             if(button.Name == "btn_PvC")
             {
-                btn_PvC.Background = selected;
-                btn_PvP.Background = unselected;
+                titleScreen.btn_PvC.Background = selected;
+                titleScreen.btn_PvP.Background = unselected;
                 Mode = "PvC";
             }
             else
             {
-                btn_PvP.Background = selected;
-                btn_PvC.Background = unselected;
+                titleScreen.btn_PvP.Background = selected;
+                titleScreen.btn_PvC.Background = unselected;
                 Mode = "PvP";
             }
 
         }
 
-        private void Button_Close(object sender, RoutedEventArgs e)
+        internal void Button_Close(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void Difficulty_Click(object sender, RoutedEventArgs e)
+        internal void Difficulty_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             if (button.Name == "btn_Easy")
             {
-                btn_Easy.Background = selected;
-                btn_Medium.Background = unselected;
-                btn_Hard.Background = unselected;
+                titleScreen.btn_Easy.Background = selected;
+                titleScreen.btn_Medium.Background = unselected;
+                titleScreen.btn_Hard.Background = unselected;
                 Difficulty = "Easy";
 
             } else if (button.Name == "btn_Medium")
             {
-                btn_Easy.Background = unselected;
-                btn_Medium.Background = selected;
-                btn_Hard.Background = unselected;
+                titleScreen.btn_Easy.Background = unselected;
+                titleScreen.btn_Medium.Background = selected;
+                titleScreen.btn_Hard.Background = unselected;
                 Difficulty = "Medium";
             } else
             {
-                btn_Easy.Background = unselected;
-                btn_Medium.Background = unselected;
-                btn_Hard.Background = selected;
+                titleScreen.btn_Easy.Background = unselected;
+                titleScreen.btn_Medium.Background = unselected;
+                titleScreen.btn_Hard.Background = selected;
                 Difficulty = "Hard";
 
             }
 
         }
 
-        private void Start_Click(object sender, RoutedEventArgs e)
+        internal void Start_Click(object sender, RoutedEventArgs e)
         {
-            this.Content = nameGUI.Content;
+            titleScreen.Visibility = Visibility.Hidden;
+            nameSelect.Visibility = Visibility.Visible;
+        }
+
+        internal void MainMenu()
+        {
+            titleScreen.Visibility = Visibility.Visible;
+            nameSelect.Visibility = Visibility.Hidden;
+        }
+
+        internal void Go()
+        {
+            game = new GameController(Mode, Difficulty, nameSelect.Player1.Content.ToString(), nameSelect.Player2.Content.ToString());
+            nameSelect.Visibility = Visibility.Hidden;
+            switch (Difficulty)
+            {
+                case "Easy":
+                    easyGame.Visibility = Visibility.Visible;
+                    break;
+                case "Medium":
+                    mediumGame.Visibility = Visibility.Visible;
+                    break;
+                case "Hard":
+                    hardGame.Visibility = Visibility.Visible;
+                    break;
+            }
         }
     }
 }
