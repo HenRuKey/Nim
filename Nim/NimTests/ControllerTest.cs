@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Nim.Models;
 using NimLibrary;
 
 namespace NimTests
@@ -118,6 +119,20 @@ namespace NimTests
                 expectedNumOfPiecesPile2 == actualNumOfPiecesPile2 &&
                 expectedNumOfPiecesPile3 == actualNumOfPiecesPile3 &&
                 expectedNumOfPiecesPile4 ==actualNumOfPiecesPile4);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))] // TODO: Change exception type to be specific
+        public void PlayerMayNotTakeAllPieces()
+        {
+            GameController gc = new GameController("PvP", "easy", "name1", "name2");
+            var allPieces = gc.Piles[0].Select(p => p).ToList();
+            allPieces.AddRange(gc.Piles[1].Select(p => p));
+            foreach (Piece piece in allPieces)
+            {
+                piece.IsSelected = true;
+            }
+            gc.TakeTurn();
         }
     }
 }
