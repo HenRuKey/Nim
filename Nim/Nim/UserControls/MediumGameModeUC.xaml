@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
-        <Image x:Name="R1C1" Source="Resource\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="455,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C1_Click"/>
-        <Image x:Name="R1C2" Source="Resource\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="549,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C2_Click"/>
+        <Image x:Name="R1C1" Source="Resources\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="455,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C1_Click"/>
+        <Image x:Name="R1C2" Source="Resources\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="549,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C2_Click"/>
         <Image x:Name="R2C1" Source="Resource\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="311,268,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR2C1_Click"/>
         <Image x:Name="R2C2" Source="Resource\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="405,268,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR2C2_Click"/>
         <Image x:Name="R2C3" Source="Resource\IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="152" Margin="504,268,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR2C3_Click"/>
