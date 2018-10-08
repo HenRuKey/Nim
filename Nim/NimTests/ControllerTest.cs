@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NimLibrary;
 
@@ -7,6 +8,7 @@ namespace NimTests
     [TestClass]
     public class ControllerTest
     {
+
         [TestMethod]
         public void NameOfPlayerOneInitialized()
         {
@@ -35,6 +37,25 @@ namespace NimTests
         {
             GameController gc = new GameController("PvC", "easy", "name1", "name2");
             Assert.IsTrue(gc.player2.IsComputer);
+        }
+
+        [TestMethod]
+        public void PiecesAreRemovedFromPile()
+        {
+            try
+            {
+                GameController gc = new GameController("PvC", "easy", "name1", "name2");
+                gc.Piles[0][0].IsSelected = true;
+                gc.TakeTurn();
+                int expectedPileSize = 2;
+                int actualPileSize = gc.Piles[0].Size;
+                Assert.AreEqual(expectedPileSize, actualPileSize);
+            }
+            catch(ArgumentOutOfRangeException e)
+            {
+                Trace.WriteLine("Pile wasn't populated.");
+                Assert.Fail();
+            }
         }
     }
 }

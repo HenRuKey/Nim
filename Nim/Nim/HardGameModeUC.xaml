@@ -7,6 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Image x:Name="R1C1" Source="IMG_4883[1617] TP2.png" HorizontalAlignment="Left" Height="93" Margin="357,10,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR1C1_Click"/>
+        <Image x:Name="R1C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="93" Margin="414,10,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR1C2_Click"/>
+        <Image x:Name="R2C1" Source="IMG_4883[1617] TP3.png" HorizontalAlignment="Left" Height="92" Margin="328,119,0,0" VerticalAlignment="Top" Width="25" MouseDown="HardR2C1_Click"/>
+        <Image x:Name="R2C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="92" Margin="385,119,0,0" VerticalAlignment="Top" Width="25" MouseDown="HardR2C2_Click"/>
+        <Image x:Name="R2C3" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="441,119,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR2C3_Click"/>
+        <Image x:Name="R3C1" Source="IMG_4883[1617] TP3.png" HorizontalAlignment="Left" Height="92" Margin="188,229,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR3C1_Click"/>
+        <Image x:Name="R3C2" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="92" Margin="245,229,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR3C2_Click"/>
+        <Image x:Name="R3C3" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="305,229,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR3C3_Click"/>
+        <Image x:Name="R3C4" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="360,229,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR3C4_Click"/>
+        <Image x:Name="R3C5" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="414,229,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR3C5_Click"/>
+        <Image x:Name="R3C6" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="471,229,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR3C6_Click"/>
+        <Image x:Name="R3C7" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="525,229,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR3C7_Click"/>
+        <Image x:Name="R3C8" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="578,229,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR3C8_Click"/>
+        <Image x:Name="R3C1_Copy" Source="IMG_4883[1617] TP3.png" HorizontalAlignment="Left" Height="92" Margin="162,338,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR4C1_Click"/>
+        <Image x:Name="R3C2_Copy" Source="IMG_4883[1617] TP.png" HorizontalAlignment="Left" Height="92" Margin="219,338,0,0" VerticalAlignment="Top" Width="26" MouseDown="HardR4C2_Click"/>
+        <Image x:Name="R3C3_Copy" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="279,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C3_Click"/>
+        <Image x:Name="R3C4_Copy" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="334,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C4_Click"/>
+        <Image x:Name="R3C5_Copy" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="388,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C5_Click"/>
+        <Image x:Name="R3C6_Copy" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="446,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C6_Click"/>
+        <Image x:Name="R3C7_Copy" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="500,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C7_Click"/>
+        <Image x:Name="R3C8_Copy" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="552,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C8_Click"/>
+        <Image x:Name="R3C8_Copy1" Source="IMG_4883[1617] TP1.png" HorizontalAlignment="Left" Height="92" Margin="604,338,0,0" VerticalAlignment="Top" Width="27" MouseDown="HardR4C9_Click"/>
     </Grid>
 </UserControl>

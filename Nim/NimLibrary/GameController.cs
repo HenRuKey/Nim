@@ -11,6 +11,7 @@ namespace NimLibrary
 {
     public class GameController
     {
+        // Access modifier set to internal to let unit tests view fields.
         internal Player player1;
         internal Player player2;
         internal Pile pile1 = new Pile();

@@ -24,5 +24,75 @@ namespace Nim
         {
             InitializeComponent();
         }
+
+        private void MediumR1C1_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR1C2_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR2C1_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR2C2_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR2C3_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR2C4_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR2C5_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C1_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C2_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C3_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C4_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C5_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C6_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void MediumR3C7_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
