@@ -90,11 +90,11 @@ namespace NimLibrary
             }
 
             if (GameOver()) {
-                //Notify user
+                //TODO: Notify user
                 return;
             }
 
-            //Change players
+            //TODO: Change players
             
             //Computer's turn
             if (player2.IsComputer /* && currentPlayer == player2*/) {
@@ -111,11 +111,11 @@ namespace NimLibrary
                 }
 
                 if (GameOver()) {
-                    //Notify user
+                    //TODO: Notify user
                     return;
                 }
 
-                //Change players
+                //TODO: Change players
             }
         }
 
