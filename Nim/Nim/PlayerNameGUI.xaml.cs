@@ -28,5 +28,10 @@ namespace Nim
         {
             
         }
+
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
