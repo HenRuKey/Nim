@@ -9,13 +9,14 @@ namespace NimLibrary
 {
     public class GameController
     {
-        Player player1;
-        Player player2;
-        Pile pile1 = new Pile();
-        Pile pile2 = new Pile();
-        Pile pile3 = new Pile();
-        Pile pile4 = new Pile();
-        List<Pile> Piles = new List<Pile>(); 
+        internal Player player1;
+        internal Player player2;
+        internal Pile pile1 = new Pile();
+        internal Pile pile2 = new Pile();
+        internal Pile pile3 = new Pile();
+        internal Pile pile4 = new Pile();
+        internal List<Pile> Piles = new List<Pile>(); 
+
         public GameController(string mode, string difficulty, string name1, string name2)
         {
             player1 = new Player(name1, false);
