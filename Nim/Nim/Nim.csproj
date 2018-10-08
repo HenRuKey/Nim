@@ -55,11 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="EasyGameModeUC.xaml">
+    <Compile Include="UserControls\NameSelect.xaml.cs">
+      <DependentUpon>NameSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TitleScreen.xaml.cs">
+      <DependentUpon>TitleScreen.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\EasyGameModeUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HardGameModeUC.xaml">
+    <Page Include="UserControls\HardGameModeUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,17 +77,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EasyGameModeUC.xaml.cs">
+    <Compile Include="UserControls\EasyGameModeUC.xaml.cs">
       <DependentUpon>EasyGameModeUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HardGameModeUC.xaml.cs">
+    <Compile Include="UserControls\HardGameModeUC.xaml.cs">
       <DependentUpon>HardGameModeUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MediumGameModeUC.xaml">
+    <Page Include="UserControls\MediumGameModeUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,9 +99,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\NameSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TitleScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MediumGameModeUC.xaml.cs">
+    <Compile Include="UserControls\MediumGameModeUC.xaml.cs">
       <DependentUpon>MediumGameModeUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="NimPlayAreaGUI.xaml.cs">
@@ -128,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NimLibrary\NimLibrary.csproj">
+      <Project>{A76E6AE8-E493-4A29-849E-9E6251D00BD9}</Project>
+      <Name>NimLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
