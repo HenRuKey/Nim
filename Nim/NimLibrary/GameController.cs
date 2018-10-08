@@ -4,18 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Windows.Shapes;
 
 namespace NimLibrary
 {
     public class GameController
     {
-        Player player1;
-        Player player2;
-        Pile pile1 = new Pile();
-        Pile pile2 = new Pile();
-        Pile pile3 = new Pile();
-        Pile pile4 = new Pile();
-        List<Pile> Piles = new List<Pile>(); 
+        internal Player player1;
+        internal Player player2;
+        internal Pile pile1 = new Pile();
+        internal Pile pile2 = new Pile();
+        internal Pile pile3 = new Pile();
+        internal Pile pile4 = new Pile();
+        internal List<Pile> Piles = new List<Pile>(); 
+
         public GameController(string mode, string difficulty, string name1, string name2)
         {
             player1 = new Player(name1, false);
@@ -57,13 +60,16 @@ namespace NimLibrary
             {
                 for (int i = 0; i < pile.Size; i++)
                 {
-                    pile.Add(new Piece()
-                    {
-                        //ImagePath = "Add A Path Here",
-                        IsSelected = false
-                    });
+                    Piece p = new Piece();
+                    p.ImagePath = "";
+                    p.IsSelected = false;
                 }
             }
+        }
+
+        private void ToggleSelected(object sender, MouseButtonEventArgs e)
+        {
+            
         }
 
         public void TakeTurn()

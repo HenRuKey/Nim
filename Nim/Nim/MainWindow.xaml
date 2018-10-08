@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nim"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="768" Width="1024" Background="#a8bce4" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Left" Margin="0,0,0,-0.2" Width="1024" Height="768">
+        <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,34,0,0" FontFamily="Adumu" FontSize="110"/>
+        <Label Content="Game Mode:" HorizontalAlignment="Left" Margin="409,196,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="40"/>
+        <Button Name="btn_PvP" Content="PvP" HorizontalAlignment="Left" Margin="287,267,0,0" VerticalAlignment="Top" Width="189" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="GameMode_Click"/>
+        <Button Name="btn_PvC" Content="PvC" HorizontalAlignment="Left" Margin="563,267,0,0" VerticalAlignment="Top" Width="189" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="GameMode_Click"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="959,10,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="Button_Close"/>
+        <Label Content="Game Difficulty:" HorizontalAlignment="Left" Margin="362,366,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="40"/>
+        <Button Name="btn_Easy" Content="Easy" HorizontalAlignment="Left" Margin="199,440,0,0" VerticalAlignment="Top" Width="189" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="Difficulty_Click"/>
+        <Button Name="btn_Medium" Content="Medium" HorizontalAlignment="Left" Margin="435,440,0,0" VerticalAlignment="Top" Width="189" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="Difficulty_Click"/>
+        <Button Name="btn_Hard" Content="Hard" HorizontalAlignment="Left" Margin="666,439,0,0" VerticalAlignment="Top" Width="189" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="Difficulty_Click"/>
+        <Button Content="Start Game" HorizontalAlignment="Left" Margin="341,555,0,0" VerticalAlignment="Top" Width="285" Height="75" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="32" Background="#6a7790" Foreground="White" Click="Start_Click"/>
+        <Button Content="?" HorizontalAlignment="Left" Margin="635,555,0,0" VerticalAlignment="Top" Width="75" Height="75" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="32" Background="#6a7790" Foreground="White"/>
+
     </Grid>
 </Window>
