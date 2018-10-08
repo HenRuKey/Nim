@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Windows.Shapes;
 
 namespace NimLibrary
 {
@@ -57,13 +59,16 @@ namespace NimLibrary
             {
                 for (int i = 0; i < pile.Size; i++)
                 {
-                    pile.Add(new Piece()
-                    {
-                        //ImagePath = "Add A Path Here",
-                        IsSelected = false
-                    });
+                    Piece p = new Piece();
+                    p.ImagePath = "";
+                    p.IsSelected = false;
                 }
             }
+        }
+
+        private void ToggleSelected(object sender, MouseButtonEventArgs e)
+        {
+            
         }
 
         public void TakeTurn()

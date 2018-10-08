@@ -16,12 +16,17 @@ namespace Nim
 {
     /// <summary>
     /// Interaction logic for PlayerNameGUI.xaml
-    /// </summary>
+    /// </summary>      
     public partial class PlayerNameGUI : Window
     {
         public PlayerNameGUI()
         {
             InitializeComponent();
+        }
+
+        private void Button_Close(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
