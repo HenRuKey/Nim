@@ -20,9 +20,33 @@ namespace Nim
     /// </summary>
     public partial class EasyGameModeUC : UserControl
     {
+        MainWindow window;
         public EasyGameModeUC()
         {
             InitializeComponent();
+        }
+
+        private void btn_EndTurn_Click(object sender, RoutedEventArgs e)
+        {
+            window = getWindow();
+            window.EndTurn();
+        }
+
+        private MainWindow getWindow()
+        {
+            return Application.Current.MainWindow as MainWindow;
+        }
+
+        private void btn_NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            window = getWindow();
+            window.MainMenu();
+        }
+
+        private void btn_Close(object sender, RoutedEventArgs e)
+        {
+            window = getWindow();
+            window.Button_Close(sender, e);
         }
     }
 }

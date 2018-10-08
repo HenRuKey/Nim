@@ -26,6 +26,7 @@ namespace Nim
         string Difficulty = "Medium";
         SolidColorBrush selected = new SolidColorBrush(Color.FromRgb(161, 162, 163));
         SolidColorBrush unselected = new SolidColorBrush(Color.FromRgb(106, 119, 144));
+
         GameController game;
 
 
@@ -115,6 +116,9 @@ namespace Nim
         {
             titleScreen.Visibility = Visibility.Visible;
             nameSelect.Visibility = Visibility.Hidden;
+            easyGame.Visibility = Visibility.Hidden;
+            mediumGame.Visibility = Visibility.Hidden;
+            hardGame.Visibility = Visibility.Hidden;
         }
 
         internal void Go()
@@ -133,6 +137,11 @@ namespace Nim
                     hardGame.Visibility = Visibility.Visible;
                     break;
             }
+        }
+
+        internal void EndTurn()
+        {
+            game.TakeTurn();
         }
     }
 }
