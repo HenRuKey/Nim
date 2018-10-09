@@ -15,7 +15,7 @@ namespace NimTests
         public void NameOfPlayerOneInitialized()
         {
             string name = "Name1";
-            GameController gc = new GameController("PvP", "easy", name, "Name2");
+            GameController gc = new GameController("PvP", "Easy", name, "Name2");
             Assert.AreEqual(name, gc.player1.Name);
         }
 
@@ -23,39 +23,39 @@ namespace NimTests
         public void NameOfPlayerTwoInitialized()
         {
             string name = "Name2";
-            GameController gc = new GameController("PvP", "easy", "Name1", name);
+            GameController gc = new GameController("PvP", "Easy", "Name1", name);
             Assert.AreEqual(name, gc.player2.Name);
         }
 
         [TestMethod]
         public void PlayerTwoPvPIsNotBot()
         {
-            GameController gc = new GameController("PvP", "easy", "name1", "name2");
+            GameController gc = new GameController("PvP", "Easy", "name1", "name2");
             Assert.IsFalse(gc.player2.IsComputer);
         }
 
         [TestMethod]
         public void PlayerTwoPvCIsBot()
         {
-            GameController gc = new GameController("PvC", "easy", "name1", "name2");
+            GameController gc = new GameController("PvC", "Easy", "name1", "name2");
             Assert.IsTrue(gc.player2.IsComputer);
         }
 
         [TestMethod]
         public void SelectedPiecesAreRemovedFromPile()
         {
-            GameController gc = new GameController("PvC", "easy", "name1", "name2");
+            GameController gc = new GameController("PvP", "Easy", "name1", "name2");
             gc.Piles[0][0].IsSelected = true;
             gc.TakeTurn();
             int expectedPileSize = 2;
-            int actualPileSize = gc.Piles[0].Size;
+            int actualPileSize = gc.Piles[0].Count;
             Assert.AreEqual(expectedPileSize, actualPileSize);
         }
 
         [TestMethod]
         public void NoSelectedPiecesArePresentAfterTurn()
         {
-            GameController gc = new GameController("PvC", "easy", "name1", "name2");
+            GameController gc = new GameController("PvC", "Easy", "name1", "name2");
             gc.Piles[0][0].IsSelected = true;
             gc.TakeTurn();
             int expectedCount = 0;
@@ -68,7 +68,7 @@ namespace NimTests
         {
             int numberOfPiles = 2;
             int numberOfPieces = 3;
-            string difficulty = "easy";
+            string difficulty = "Easy";
             GameController gc = new GameController("PvP", difficulty, "name1", "name2");
             int actualNumberOfPiles = gc.Piles.Count;
             int numberOfPiecesPile1 = gc.Piles[0].Count;
@@ -86,7 +86,7 @@ namespace NimTests
             int expectedNumOfPiecesPile1 = 2;
             int expectedNumOfPiecesPile2 = 5;
             int expectedNumOfPiecesPile3 = 7;
-            string difficulty = "medium";
+            string difficulty = "Medium";
             GameController gc = new GameController("PvP", difficulty, "name1", "name2");
             int actualNumOfPiles = gc.Piles.Count;
             int actualNumOfPiecesPile1 = gc.Piles[0].Count;
@@ -107,7 +107,7 @@ namespace NimTests
             int expectedNumOfPiecesPile2 = 3;
             int expectedNumOfPiecesPile3 = 8;
             int expectedNumOfPiecesPile4 = 9;
-            string difficulty = "hard";
+            string difficulty = "Hard";
             GameController gc = new GameController("PvP", difficulty, "name1", "name2");
             int actualNumOfPiles = gc.Piles.Count;
             int actualNumOfPiecesPile1 = gc.Piles[0].Count;
@@ -119,20 +119,6 @@ namespace NimTests
                 expectedNumOfPiecesPile2 == actualNumOfPiecesPile2 &&
                 expectedNumOfPiecesPile3 == actualNumOfPiecesPile3 &&
                 expectedNumOfPiecesPile4 ==actualNumOfPiecesPile4);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(Exception))] // TODO: Change exception type to be specific
-        public void PlayerMayNotTakeAllPieces()
-        {
-            GameController gc = new GameController("PvP", "easy", "name1", "name2");
-            var allPieces = gc.Piles[0].Select(p => p).ToList();
-            allPieces.AddRange(gc.Piles[1].Select(p => p));
-            foreach (Piece piece in allPieces)
-            {
-                piece.IsSelected = true;
-            }
-            gc.TakeTurn();
         }
     }
 }
