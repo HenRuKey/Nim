@@ -14,8 +14,8 @@
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_EndTurn_Click"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_NewGame_Click"/>
-        <UniformGrid Name="row1" Margin="144,91,137,505" Rows="1"/>
-        <UniformGrid Name="row2" Margin="144,270,137,326" Rows="1"/>
-        <UniformGrid Name="row3" Margin="144,442,137,154" Rows="1"/>
+        <UniformGrid Name="row1" Margin="418,96,419,500" Rows="1"/>
+        <UniformGrid Name="row2" Margin="293,268,301,328" Rows="1"/>
+        <UniformGrid Name="row3" Margin="188,440,203,156" Rows="1"/>
     </Grid>
 </UserControl>
