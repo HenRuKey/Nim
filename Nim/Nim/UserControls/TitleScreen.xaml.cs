@@ -73,5 +73,12 @@ namespace Nim.UserControls
             window = getWindow();
             window.Start_Click(sender, e);
         }
+
+        private void btnHelp_Click(object sender, RoutedEventArgs e) {
+            MessageBox.Show("Each turn you can take any number of matches " +
+                "from a single row. Press \"End Turn\" when you are finished. " +
+                "The player that takes the last piece is the loser!", "Tutorial",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }
