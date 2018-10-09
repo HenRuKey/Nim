@@ -22,7 +22,7 @@ namespace Nim
     /// </summary>
     public partial class EasyGameModeUC : UserControl
     {    
-        MainWindow window;
+        internal MainWindow window;
         public List<Pile> Piles { get; set; }
 
         public EasyGameModeUC()
@@ -33,24 +33,17 @@ namespace Nim
 
         private void btn_EndTurn_Click(object sender, RoutedEventArgs e)
         {
-            window = getWindow();
             window.EndTurn();
-        }
-
-        private MainWindow getWindow()
-        {
-            return Application.Current.MainWindow as MainWindow;
         }
 
         private void btn_NewGame_Click(object sender, RoutedEventArgs e)
         {
-            window = getWindow();
+
             window.MainMenu();
         }
 
         private void btn_Close(object sender, RoutedEventArgs e)
         {
-            window = getWindow();
             window.Button_Close(sender, e);
         }
 
@@ -64,7 +57,7 @@ namespace Nim
                 {
                     Source = imageBitmap,
                 };
-                //img.MouseDown
+                img.MouseDown += window.ToggleSelected;
 
                 row1.Children.Add(img);
             }
