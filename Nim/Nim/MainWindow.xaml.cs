@@ -129,6 +129,8 @@ namespace Nim
             {
                 case "Easy":
                     easyGame.Visibility = Visibility.Visible;
+                    easyGame.Piles = game.getPiles();
+                    easyGame.UpdateView();
                     break;
                 case "Medium":
                     mediumGame.Visibility = Visibility.Visible;
@@ -139,9 +141,15 @@ namespace Nim
             }
         }
 
+        private void ToggleSelected(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
         internal void EndTurn()
         {
             game.TakeTurn();
+            easyGame.UpdateView();
         }
     }
 }

@@ -32,12 +32,12 @@ namespace NimLibrary
             }
 
             switch (difficulty) {
-                case "easy":
+                case "Easy":
                     pile1.Size = pile2.Size = 3;
                     Piles.Add(pile1);
                     Piles.Add(pile2);
                     break;
-                case "medium":
+                case "Medium":
                     pile1.Size = 2;
                     pile2.Size = 5;
                     pile3.Size = 7;
@@ -45,7 +45,7 @@ namespace NimLibrary
                     Piles.Add(pile2);
                     Piles.Add(pile3);
                     break;
-                case "hard":
+                case "Hard":
                     pile1.Size = 2;
                     pile1.Size = 3;
                     pile1.Size = 8;
@@ -62,16 +62,18 @@ namespace NimLibrary
                 for (int i = 0; i < pile.Size; i++)
                 {
                     Piece p = new Piece();
-                    p.ImagePath = "";
+                    p.ImagePath = "/Nim;component/Matchstick5.png";
                     p.IsSelected = false;
+                    pile.Add(p);
                 }
             }
         }
-
-        private void ToggleSelected(object sender, MouseButtonEventArgs e)
+        public List<Pile> getPiles()
         {
-            
+            return Piles;
         }
+
+
 
         public void TakeTurn()
         {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Nim.Models {
-    class Pile : List<Piece> {
+    public class Pile : List<Piece> {
         public int Size { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nim.Models;
+using NimLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +21,13 @@ namespace Nim
     /// Interaction logic for EasyGameModeUC.xaml
     /// </summary>
     public partial class EasyGameModeUC : UserControl
-    {
+    {    
         MainWindow window;
+        public List<Pile> Piles { get; set; }
         public EasyGameModeUC()
         {
             InitializeComponent();
+            Piles = new List<Pile>();
         }
 
         private void EasyR1C1_Click(object sender, MouseButtonEventArgs e)
@@ -78,5 +82,21 @@ namespace Nim
             window = getWindow();
             window.Button_Close(sender, e);
         }
+
+        internal void UpdateView()
+        {
+            foreach (Piece piece in Piles[0])
+            {
+                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                Image img = new Image()
+                {
+                    Source = imageBitmap,
+                };
+                //img.MouseDown
+
+                row1.Children.Add(img);
+            }
+    }
     }
 }
