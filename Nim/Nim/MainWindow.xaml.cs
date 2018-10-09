@@ -1,4 +1,5 @@
-﻿using Nim.UserControls;
+﻿using Nim.Models;
+using Nim.UserControls;
 using NimLibrary;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,9 +30,6 @@ namespace Nim
         SolidColorBrush unselected = new SolidColorBrush(Color.FromRgb(106, 119, 144));
 
         GameController game;
-
-
-
         TitleScreen titleScreen = new TitleScreen();
         NameSelect nameSelect = new NameSelect();
         EasyGameModeUC easyGame = new EasyGameModeUC();
@@ -144,8 +143,45 @@ namespace Nim
 
         internal void ToggleSelected(object sender, MouseButtonEventArgs e)
         {
-
+            Image img = (Image)sender;
+            UniformGrid row = (UniformGrid)img.Parent;
+            
+            switch (row.Name)
+            {
+                case "row1":
+                    if (CheckRows(1))
+                    {
+                        img.RenderTransformOrigin = new Point(0.5, 0.5);
+                        ScaleTransform flipTrans = new ScaleTransform();
+                        flipTrans.ScaleY = -1;
+                        img.RenderTransform = flipTrans;
+                    }
+                    break;
+                case "row2":
+                    break;
+                case "row3":
+                    break;
+                case "row4":
+                    break;
+            }
         }
+
+        internal bool CheckRows(int index)
+        {
+            List<Pile> piles = game.getPiles();
+            for (int i = 0; i < game.getPiles().Count; i++)
+            {
+                foreach (Piece piece in piles[i])
+                {
+                    if (piece.IsSelected && i != index)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
 
         internal void EndTurn()
         {
