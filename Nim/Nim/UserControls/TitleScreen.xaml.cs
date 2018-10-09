@@ -24,7 +24,6 @@ namespace Nim.UserControls
         public TitleScreen()
         {
             InitializeComponent();
-            
         }
 
         private void btn_PvP_Click(object sender, RoutedEventArgs e)
