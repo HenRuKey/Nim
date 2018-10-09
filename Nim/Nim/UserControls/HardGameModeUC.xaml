@@ -7,34 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
-        <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="443,10,0,0" FontFamily="Adumu" FontSize="70"/>
+        <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,10,0,0" FontFamily="Adumu" FontSize="70"/>
         <Label Content="Player 1 Name:" HorizontalAlignment="Left" Margin="170,640,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
         <Button Content="X" HorizontalAlignment="Left" Margin="839,638,0,0" VerticalAlignment="Top" Width="48" Height="48" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Close"/>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_EndTurn_Click"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_NewGame_Click"/>
-        <Image x:Name="R1C1" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="116" Margin="462,92,0,0" VerticalAlignment="Top" Width="32" MouseDown="HardR1C1_Click"/>
-        <Image x:Name="R1C2" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="116" Margin="532,92,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR1C2_Click"/>
-        <Image x:Name="R2C1" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="426,228,0,0" VerticalAlignment="Top" Width="31" MouseDown="HardR2C1_Click"/>
-        <Image x:Name="R2C2" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="496,228,0,0" VerticalAlignment="Top" Width="31" MouseDown="HardR2C2_Click"/>
-        <Image x:Name="R2C3" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="566,228,0,0" VerticalAlignment="Top" Width="32" MouseDown="HardR2C3_Click"/>
-        <Image x:Name="R3C1" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="252,364,0,0" VerticalAlignment="Top" Width="32" MouseDown="HardR3C1_Click"/>
-        <Image x:Name="R3C2" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="323,364,0,0" VerticalAlignment="Top" Width="32" MouseDown="HardR3C2_Click"/>
-        <Image x:Name="R3C3" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="397,364,0,0" VerticalAlignment="Top" Width="34" MouseDown="HardR3C3_Click"/>
-        <Image x:Name="R3C4" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="465,364,0,0" VerticalAlignment="Top" Width="34" MouseDown="HardR3C4_Click"/>
-        <Image x:Name="R3C5" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="532,364,0,0" VerticalAlignment="Top" Width="34" MouseDown="HardR3C5_Click"/>
-        <Image x:Name="R3C6" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="603,364,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR3C6_Click"/>
-        <Image x:Name="R3C7" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="670,364,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR3C7_Click"/>
-        <Image x:Name="R3C8" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="114" Margin="736,364,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR3C8_Click"/>
-        <Image x:Name="R3C1_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="220,499,0,0" VerticalAlignment="Top" Width="32" MouseDown="HardR4C1_Click"/>
-        <Image x:Name="R3C2_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="291,499,0,0" VerticalAlignment="Top" Width="32" MouseDown="HardR4C2_Click"/>
-        <Image x:Name="R3C3_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="365,499,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR4C3_Click"/>
-        <Image x:Name="R3C4_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="433,499,0,0" VerticalAlignment="Top" Width="34" MouseDown="HardR4C4_Click"/>
-        <Image x:Name="R3C5_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="500,499,0,0" VerticalAlignment="Top" Width="34" MouseDown="HardR4C5_Click"/>
-        <Image x:Name="R3C6_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="572,499,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR4C6_Click"/>
-        <Image x:Name="R3C7_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="639,499,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR4C7_Click"/>
-        <Image x:Name="R3C8_Copy" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="703,499,0,0" VerticalAlignment="Top" Width="34" MouseDown="HardR4C8_Click"/>
-        <Image x:Name="R3C8_Copy1" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="114" Margin="768,499,0,0" VerticalAlignment="Top" Width="33" MouseDown="HardR4C9_Click"/>
+        <UniformGrid Name="row1" Margin="428,96,402,544" Rows="1"/>
+        <UniformGrid Name="row2" Margin="305,224,272,416" Rows="1"/>
+        <UniformGrid Name="row3" Margin="192,352,173,288" Rows="1"/>
+        <UniformGrid x:Name="row3_Copy" Margin="151,480,137,160" Rows="1"/>
     </Grid>
 </UserControl>
