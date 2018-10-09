@@ -52,6 +52,7 @@ namespace Nim
             hardGame.Visibility = Visibility.Hidden;
             titleScreen.btn_PvC.Background = selected;
             titleScreen.btn_Medium.Background = selected;
+            easyGame.window = this;
         }
 
 
@@ -141,7 +142,7 @@ namespace Nim
             }
         }
 
-        private void ToggleSelected(object sender, MouseButtonEventArgs e)
+        internal void ToggleSelected(object sender, MouseButtonEventArgs e)
         {
 
         }
