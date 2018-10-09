@@ -24,5 +24,24 @@ namespace Nim.UserControls
         {
             InitializeComponent();
         }
+
+        MainWindow window;
+
+        private MainWindow getWindow()
+        {
+            return Application.Current.MainWindow as MainWindow;
+        }
+
+        private void Close_Game_Click(object sender, RoutedEventArgs e)
+        {
+            window = getWindow();
+            window.Button_Close(sender, e);
+        }
+
+        private void PlayAgain_Click(object sender, RoutedEventArgs e)
+        {
+            window = getWindow();
+            window.MainMenu();
+        }
     }
 }
