@@ -51,27 +51,15 @@ namespace Nim
         {
             foreach (Piece piece in Piles[0])
             {
-                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
-                BitmapImage imageBitmap = new BitmapImage(imageUri);
-                Image img = new Image()
-                {
-                    Source = imageBitmap,
-                };
+                Image img = piece.img;
                 img.MouseDown += window.ToggleSelected;
-
                 row1.Children.Add(img);
             }
 
             foreach (Piece piece in Piles[1])
             {
-                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
-                BitmapImage imageBitmap = new BitmapImage(imageUri);
-                Image img = new Image()
-                {
-                    Source = imageBitmap,
-                };
-                //img.MouseDown
-
+                Image img = piece.img;
+                img.MouseDown += window.ToggleSelected;
                 row2.Children.Add(img);
             }
         }

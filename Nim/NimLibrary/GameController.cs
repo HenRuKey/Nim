@@ -47,9 +47,9 @@ namespace NimLibrary
                     break;
                 case "Hard":
                     pile1.Size = 2;
-                    pile1.Size = 3;
-                    pile1.Size = 8;
-                    pile1.Size = 9;
+                    pile2.Size = 3;
+                    pile3.Size = 8;
+                    pile4.Size = 9;
                     Piles.Add(pile1);
                     Piles.Add(pile2);
                     Piles.Add(pile3);
@@ -61,8 +61,7 @@ namespace NimLibrary
             {
                 for (int i = 0; i < pile.Size; i++)
                 {
-                    Piece p = new Piece();
-                    p.ImagePath = "/Nim;component/Matchstick5.png";
+                    Piece p = new Piece();                    
                     p.IsSelected = false;
                     pile.Add(p);
                 }
@@ -152,6 +151,18 @@ namespace NimLibrary
             int numberToTake = random.Next(1, selectedPile.Count);
             for (int i = 0; i < numberToTake; i++) {
                 selectedPile[selectedPile.Count - 1 - i].IsSelected = true;
+            }
+        }
+
+        public void SelectPiece(int index)
+        {
+            foreach (Piece piece in Piles[index])
+            {
+                if (!piece.IsSelected)
+                {
+                    piece.IsSelected = true;
+                    return;
+                }
             }
         }
     }

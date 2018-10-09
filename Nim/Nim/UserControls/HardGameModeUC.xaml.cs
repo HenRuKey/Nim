@@ -21,7 +21,7 @@ namespace Nim
     /// </summary>
     public partial class HardGameModeUC : UserControl
     {
-        MainWindow window;
+        internal MainWindow window;
         public List<Pile> Piles { get; set; }
 
         public HardGameModeUC()
@@ -32,24 +32,17 @@ namespace Nim
 
         private void btn_EndTurn_Click(object sender, RoutedEventArgs e)
         {
-            window = getWindow();
             window.EndTurn();
         }
 
-        private MainWindow getWindow()
-        {
-            return Application.Current.MainWindow as MainWindow;
-        }
 
         private void btn_NewGame_Click(object sender, RoutedEventArgs e)
         {
-            window = getWindow();
             window.MainMenu();
         }
 
         private void btn_Close(object sender, RoutedEventArgs e)
         {
-            window = getWindow();
             window.Button_Close(sender, e);
         }
 
@@ -57,53 +50,29 @@ namespace Nim
         {
             foreach (Piece piece in Piles[0])
             {
-                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
-                BitmapImage imageBitmap = new BitmapImage(imageUri);
-                Image img = new Image()
-                {
-                    Source = imageBitmap,
-                };
-                //img.MouseDown
-
+                Image img = piece.img;
+                img.MouseDown += window.ToggleSelected;
                 row1.Children.Add(img);
             }
 
             foreach (Piece piece in Piles[1])
             {
-                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
-                BitmapImage imageBitmap = new BitmapImage(imageUri);
-                Image img = new Image()
-                {
-                    Source = imageBitmap,
-                };
-                //img.MouseDown
-
+                Image img = piece.img;
+                img.MouseDown += window.ToggleSelected;
                 row2.Children.Add(img);
             }
 
             foreach (Piece piece in Piles[2])
             {
-                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
-                BitmapImage imageBitmap = new BitmapImage(imageUri);
-                Image img = new Image()
-                {
-                    Source = imageBitmap,
-                };
-                //img.MouseDown
-
+                Image img = piece.img;
+                img.MouseDown += window.ToggleSelected;
                 row3.Children.Add(img);
             }
 
             foreach (Piece piece in Piles[3])
             {
-                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
-                BitmapImage imageBitmap = new BitmapImage(imageUri);
-                Image img = new Image()
-                {
-                    Source = imageBitmap,
-                };
-                //img.MouseDown
-
+                Image img = piece.img;
+                img.MouseDown += window.ToggleSelected;
                 row4.Children.Add(img);
             }
         }

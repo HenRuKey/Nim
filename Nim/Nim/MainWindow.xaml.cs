@@ -52,6 +52,8 @@ namespace Nim
             titleScreen.btn_PvC.Background = selected;
             titleScreen.btn_Medium.Background = selected;
             easyGame.window = this;
+            mediumGame.window = this;
+            hardGame.window = this;
         }
 
 
@@ -134,9 +136,13 @@ namespace Nim
                     break;
                 case "Medium":
                     mediumGame.Visibility = Visibility.Visible;
+                    mediumGame.Piles = game.getPiles();
+                    mediumGame.UpdateView();
                     break;
                 case "Hard":
                     hardGame.Visibility = Visibility.Visible;
+                    hardGame.Piles = game.getPiles();
+                    hardGame.UpdateView();
                     break;
             }
         }
@@ -152,16 +158,37 @@ namespace Nim
                     if (CheckRows(1))
                     {
                         img.RenderTransformOrigin = new Point(0.5, 0.5);
-                        ScaleTransform flipTrans = new ScaleTransform();
-                        flipTrans.ScaleY = -1;
-                        img.RenderTransform = flipTrans;
+                        RotateTransform rotateTransform = new RotateTransform(15);
+                        img.RenderTransform = rotateTransform;
+                        game.SelectPiece(1);
                     }
                     break;
                 case "row2":
+                    if (CheckRows(2))
+                    {
+                        img.RenderTransformOrigin = new Point(0.5, 0.5);
+                        RotateTransform rotateTransform = new RotateTransform(15);
+                        img.RenderTransform = rotateTransform;
+                        game.SelectPiece(2);
+                    }
                     break;
                 case "row3":
+                    if (CheckRows(3))
+                    {
+                        img.RenderTransformOrigin = new Point(0.5, 0.5);
+                        RotateTransform rotateTransform = new RotateTransform(15);
+                        img.RenderTransform = rotateTransform;
+                        game.SelectPiece(3);
+                    }
                     break;
                 case "row4":
+                    if (CheckRows(4))
+                    {
+                        img.RenderTransformOrigin = new Point(0.5, 0.5);
+                        RotateTransform rotateTransform = new RotateTransform(15);
+                        img.RenderTransform = rotateTransform;
+                        game.SelectPiece(4);
+                    }
                     break;
             }
         }
