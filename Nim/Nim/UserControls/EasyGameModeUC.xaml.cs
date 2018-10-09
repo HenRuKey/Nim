@@ -24,6 +24,7 @@ namespace Nim
     {    
         MainWindow window;
         public List<Pile> Piles { get; set; }
+
         public EasyGameModeUC()
         {
             InitializeComponent();
@@ -67,6 +68,19 @@ namespace Nim
 
                 row1.Children.Add(img);
             }
-    }
+
+            foreach (Piece piece in Piles[1])
+            {
+                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                Image img = new Image()
+                {
+                    Source = imageBitmap,
+                };
+                //img.MouseDown
+
+                row2.Children.Add(img);
+            }
+        }
     }
 }

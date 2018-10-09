@@ -14,9 +14,9 @@
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_EndTurn_Click"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_NewGame_Click"/>
-        <UniformGrid Name="row1" Margin="428,96,402,544" Rows="1"/>
-        <UniformGrid Name="row2" Margin="305,224,272,416" Rows="1"/>
-        <UniformGrid Name="row3" Margin="192,352,173,288" Rows="1"/>
-        <UniformGrid x:Name="row3_Copy" Margin="151,480,137,160" Rows="1"/>
+        <UniformGrid Name="row1" Margin="428,96,402,544" Rows="1"></UniformGrid>
+        <UniformGrid Name="row2" Margin="305,224,272,416" Rows="1"></UniformGrid>
+        <UniformGrid Name="row3" Margin="192,352,173,288" Rows="1"></UniformGrid>
+        <UniformGrid Name="row4" Margin="151,480,137,160" Rows="1"></UniformGrid>
     </Grid>
 </UserControl>
