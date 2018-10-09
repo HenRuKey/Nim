@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
-        <Label Content="Nim" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,104,0,0" FontFamily="Adumu" FontSize="80" Height="102" Width="150"/>
-        <Label Name="lb_loser" Content="" HorizontalAlignment="Left" Margin="376,411,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="45" Height="67" Width="304"/>
+        <Label Content="Nim" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="448,105,426,0" FontFamily="Adumu" FontSize="80" Height="102" Width="150"/>
+        <Label Name="lb_loser" Content="" HorizontalAlignment="Left" Margin="376,411,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="45" Height="67" Width="374"/>
         <Label Content="GAME OVER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="286,249,0,0" FontFamily="Adumu Inline" FontSize="90" Height="128" Width="545"/>
-        <Label Content="Would you like to play again?" HorizontalAlignment="Left" Margin="268,569,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
+        <Label Content="Would you like to play again?" HorizontalAlignment="Left" Margin="268,569,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35" Width="546"/>
         <Button Content="Yes" HorizontalAlignment="Left" Margin="410,622,0,0" VerticalAlignment="Top" Width="113" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="PlayAgain_Click"/>
         <Button Content="No" HorizontalAlignment="Left" Margin="528,622,0,0" VerticalAlignment="Top" Width="113" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="Close_Game_Click"/>
     </Grid>
