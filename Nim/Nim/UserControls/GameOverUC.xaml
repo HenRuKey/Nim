@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Nim.UserControls.GameOverUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nim.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1024">
+    <Grid>
+        <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="449,104,0,0" FontFamily="Adumu" FontSize="80" Height="102" Width="141"/>
+        <Label Content="Player 1 Won" HorizontalAlignment="Left" Margin="376,411,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="45" Height="67" Width="304"/>
+        <Label Content="GAME OVER" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="286,249,0,0" FontFamily="Adumu Inline" FontSize="90" Height="128" Width="545"/>
+        <Label Content="Would you like to play again?" HorizontalAlignment="Left" Margin="268,569,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="621,622,0,0" VerticalAlignment="Top" Width="57" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Close"/>
+        <Button Content="Yes" HorizontalAlignment="Left" Margin="385,622,0,0" VerticalAlignment="Top" Width="113" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <Button Content="No" HorizontalAlignment="Left" Margin="503,622,0,0" VerticalAlignment="Top" Width="113" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
+    </Grid>
+</UserControl>
