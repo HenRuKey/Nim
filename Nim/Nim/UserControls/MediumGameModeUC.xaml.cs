@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nim.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +21,15 @@ namespace Nim
     /// </summary>
     public partial class MediumGameModeUC : UserControl
     {
+        MainWindow window;
+        public List<Pile> Piles { get; set; }
+
         public MediumGameModeUC()
         {
             InitializeComponent();
+            Piles = new List<Pile>();
         }
-
-        MainWindow window;
-
+        
         private void btn_EndTurn_Click(object sender, RoutedEventArgs e)
         {
             window = getWindow();
@@ -48,6 +51,48 @@ namespace Nim
         {
             window = getWindow();
             window.Button_Close(sender, e);
+        }
+
+        internal void UpdateView()
+        {
+            foreach (Piece piece in Piles[0])
+            {
+                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                Image img = new Image()
+                {
+                    Source = imageBitmap,
+                };
+                //img.MouseDown
+
+                row1.Children.Add(img);
+            }
+
+            foreach (Piece piece in Piles[1])
+            {
+                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                Image img = new Image()
+                {
+                    Source = imageBitmap,
+                };
+                //img.MouseDown
+
+                row2.Children.Add(img);
+            }
+
+            foreach (Piece piece in Piles[2])
+            {
+                Uri imageUri = new Uri(piece.ImagePath, UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                Image img = new Image()
+                {
+                    Source = imageBitmap,
+                };
+                //img.MouseDown
+
+                row3.Children.Add(img);
+            }
         }
     }
 }
