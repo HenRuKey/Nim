@@ -83,10 +83,14 @@ namespace NimLibrary
 
             //Remove selected pieces
             foreach (Pile pile in Piles) {
+                List<Piece> holder = new List<Piece>();
                 foreach (Piece piece in pile) {
                     if (piece.IsSelected) {
-                        pile.Remove(piece);
+                        holder.Add(piece);
                     }
+                }
+                foreach (Piece piece in holder) {
+                    pile.Remove(piece);
                 }
             }
 
@@ -101,13 +105,17 @@ namespace NimLibrary
             if (player2.IsComputer /* && currentPlayer == player2*/) {
                 //Select pieces
                 RandomComp();
-
+                
                 //Remove selected pieces
                 foreach (Pile pile in Piles) {
+                    List<Piece> holder = new List<Piece>();
                     foreach (Piece piece in pile) {
                         if (piece.IsSelected) {
-                            pile.Remove(piece);
+                            holder.Add(piece);
                         }
+                    }
+                    foreach (Piece piece in holder) {
+                        pile.Remove(piece);
                     }
                 }
 
