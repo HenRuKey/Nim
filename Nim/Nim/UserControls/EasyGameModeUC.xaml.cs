@@ -78,41 +78,5 @@ namespace Nim
             window = getWindow();
             window.Button_Close(sender, e);
         }
-
-        private void E_R1C1_Click(object sender, RoutedEventArgs e)
-        {
-            btnR1C1.Opacity = 0.5;
-            btnR1C1.IsEnabled = false;
-        }
-
-        private void E_R1C2_Click(object sender, RoutedEventArgs e)
-        {
-            btnR1C2.Opacity = 0.5;
-            btnR1C2.IsEnabled = false;
-        }
-
-        private void E_R1C3_Click(object sender, RoutedEventArgs e)
-        {
-            btnR1C3.Opacity = 0.5;
-            btnR1C3.IsEnabled = false;
-        }
-
-        private void E_R2C1_Click(object sender, RoutedEventArgs e)
-        {
-            btnR2C1.Opacity = 0.5;
-            btnR2C1.IsEnabled = false;
-        }
-
-        private void E_R2C2_Click(object sender, RoutedEventArgs e)
-        {
-            btnR2C2.Opacity = 0.5;
-            btnR2C2.IsEnabled = false;
-        }
-
-        private void E_R2C3_Click(object sender, RoutedEventArgs e)
-        {
-            btnR2C3.Opacity = 0.5;
-            btnR2C3.IsEnabled = false;
-        }
     }
 }

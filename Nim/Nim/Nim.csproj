@@ -156,25 +156,7 @@
     <Resource Include="Matchstick.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Matchstick1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Matchstick2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Matchstick3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Matchstick4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Matchstick5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Matchstick6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Matchstick7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

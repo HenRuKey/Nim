@@ -9,28 +9,15 @@
     <Grid>
         <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="452,10,0,0" FontFamily="Adumu" FontSize="70"/>
         <Label Content="Player 1 Name:" HorizontalAlignment="Left" Margin="170,640,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
-        <Button Content="X" HorizontalAlignment="Left" Margin="839,638,0,0" VerticalAlignment="Top" Width="48" Height="48" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
-        <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
-        <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
-        <Button Name="btnR1C1" Background="#6a7790" HorizontalAlignment="Left" Margin="367,121,0,0" VerticalAlignment="Top" Width="53" Height="217" Click="E_R1C1_Click" >
-            <Button.Content>
-                <Image Source="/Nim;component/Matchstick5.png" />
-            </Button.Content>
-        </Button>
-        <Button x:Name="btnR1C2" Background="#6a7790" HorizontalAlignment="Left" Margin="489,121,0,0" VerticalAlignment="Top" Width="53" Height="217" Click="E_R1C2_Click" >
-            <Image Source="/Nim;component/Matchstick5.png" />
-        </Button>
-        <Button x:Name="btnR1C3" Background="#6a7790" HorizontalAlignment="Left" Margin="606,121,0,0" VerticalAlignment="Top" Width="53" Height="217" Click="E_R1C3_Click" >
-            <Image Source="/Nim;component/Matchstick5.png" />
-        </Button>
-        <Button x:Name="btnR2C1" Background="#6a7790" HorizontalAlignment="Left" Margin="367,360,0,0" VerticalAlignment="Top" Width="53" Height="217" Click="E_R2C1_Click" >
-            <Image Source="/Nim;component/Matchstick5.png" />
-        </Button>
-        <Button x:Name="btnR2C2" Background="#6a7790" HorizontalAlignment="Left" Margin="489,360,0,0" VerticalAlignment="Top" Width="53" Height="217" Click="E_R2C2_Click" >
-            <Image Source="/Nim;component/Matchstick5.png" />
-        </Button>
-        <Button x:Name="btnR2C3" Background="#6a7790" HorizontalAlignment="Left" Margin="606,360,0,0" VerticalAlignment="Top" Width="53" Height="217" Click="E_R2C3_Click" >
-            <Image Source="/Nim;component/Matchstick5.png" />
-        </Button>
+        <Button Content="X" HorizontalAlignment="Left" Margin="839,638,0,0" VerticalAlignment="Top" Width="48" Height="48" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Close"/>
+        <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_EndTurn_Click"/>
+        <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_NewGame_Click"/>
+        <Image x:Name="R1C1" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="223" Margin="344,108,0,0" VerticalAlignment="Top" Width="61" MouseDown="EasyR1C1_Click"/>
+        <Image x:Name="R1C2" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="223" Margin="481,108,0,0" VerticalAlignment="Top" Width="61" MouseDown="EasyR1C2_Click"/>
+        <Image x:Name="R1C3" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="223" Margin="618,108,0,0" VerticalAlignment="Top" Width="63" MouseDown="EasyR1C3_Click"/>
+
+        <Image x:Name="R2C1" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="223" Margin="344,364,0,0" VerticalAlignment="Top" Width="61" MouseDown="EasyR2C1_Click"/>
+        <Image x:Name="R2C2" Source="/Nim;component/Matchstick5.png" HorizontalAlignment="Left" Height="223" Margin="481,364,0,0" VerticalAlignment="Top" Width="61" MouseDown="EasyR2C2_Click"/>
+        <Image x:Name="R2C3" Source="/Nim;component/Matchstick5.png"  HorizontalAlignment="Left" Height="223" Margin="618,364,0,0" VerticalAlignment="Top" Width="63" MouseDown="EasyR2C3_Click"/>
     </Grid>
 </UserControl>
