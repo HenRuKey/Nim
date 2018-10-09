@@ -7,20 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
-        <Image x:Name="R1C1" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="455,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C1_Click"/>       
-        <Image x:Name="R1C2" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="549,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C2_Click"/>       
-        <Image x:Name="R2C1" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="311,268,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR2C1_Click"/>       
-        <Image x:Name="R2C2" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="405,268,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR2C2_Click"/>      
-        <Image x:Name="R2C3" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="504,268,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR2C3_Click"/>       
-        <Image x:Name="R2C4" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="596,268,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR2C4_Click"/>       
-        <Image x:Name="R2C5" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="684,268,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR2C5_Click"/>       
-        <Image x:Name="R3C1" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="221,454,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR3C1_Click"/>      
-        <Image x:Name="R3C2" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="315,454,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR3C2_Click"/>       
-        <Image x:Name="R3C3" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="414,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C3_Click"/>       
-        <Image x:Name="R3C4" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="506,454,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR3C4_Click"/>      
-        <Image x:Name="R3C5" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="594,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C5_Click"/>      
-        <Image x:Name="R3C6" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="688,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C6_Click"/>      
-        <Image x:Name="R3C7" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="777,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C7_Click"/>     
         <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="451,10,0,0" FontFamily="Adumu" FontSize="70"/>
         <Label Content="Player 1 Name:" HorizontalAlignment="Left" Margin="170,640,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
         <Button Content="X" HorizontalAlignment="Left" Margin="839,638,0,0" VerticalAlignment="Top" Width="48" Height="48" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White"/>
@@ -29,5 +15,19 @@
         <Button Content="X" HorizontalAlignment="Left" Margin="959,10,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Close"/>
         <Button Content="End Turn" HorizontalAlignment="Left" Margin="462,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_EndTurn_Click"/>
         <Button Content="New Game" HorizontalAlignment="Left" Margin="651,638,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_NewGame_Click"/>
+        <Image x:Name="R1C1" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="455,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C1_Click"/>
+        <Image x:Name="R1C2" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="549,88,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR1C2_Click"/>
+        <Image x:Name="R2C1" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="311,268,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR2C1_Click"/>
+        <Image x:Name="R2C2" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="405,268,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR2C2_Click"/>
+        <Image x:Name="R2C3" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="504,268,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR2C3_Click"/>
+        <Image x:Name="R2C4" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="596,268,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR2C4_Click"/>
+        <Image x:Name="R2C5" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="152" Margin="684,268,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR2C5_Click"/>
+        <Image x:Name="R3C1" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="221,454,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR3C1_Click"/>
+        <Image x:Name="R3C2" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="315,454,0,0" VerticalAlignment="Top" Width="42" MouseDown="MediumR3C2_Click"/>
+        <Image x:Name="R3C3" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="414,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C3_Click"/>
+        <Image x:Name="R3C4" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="506,454,0,0" VerticalAlignment="Top" Width="43" MouseDown="MediumR3C4_Click"/>
+        <Image x:Name="R3C5" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="594,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C5_Click"/>
+        <Image x:Name="R3C6" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="688,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C6_Click"/>
+        <Image x:Name="R3C7" Source="Resources\Matchstick.png" HorizontalAlignment="Left" Height="153" Margin="777,454,0,0" VerticalAlignment="Top" Width="44" MouseDown="MediumR3C7_Click"/>
     </Grid>
 </UserControl>
