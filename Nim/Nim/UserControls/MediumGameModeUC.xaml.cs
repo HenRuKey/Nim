@@ -48,23 +48,44 @@ namespace Nim
 
         internal void UpdateView()
         {
+            row1.Children.Clear();
+            row2.Children.Clear();
+            row3.Children.Clear();
             foreach (Piece piece in Piles[0])
             {
-                Image img = piece.img;
+                Image img;
+                Uri imageUri = new Uri("/Nim;component/Matchstick5.png", UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                img = new Image()
+                {
+                    Source = imageBitmap,
+                };
                 img.MouseDown += window.ToggleSelected;
                 row1.Children.Add(img);
             }
 
             foreach (Piece piece in Piles[1])
             {
-                Image img = piece.img;
+                Image img;
+                Uri imageUri = new Uri("/Nim;component/Matchstick5.png", UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                img = new Image()
+                {
+                    Source = imageBitmap,
+                };
                 img.MouseDown += window.ToggleSelected;
                 row2.Children.Add(img);
             }
 
             foreach (Piece piece in Piles[2])
             {
-                Image img = piece.img;
+                Image img;
+                Uri imageUri = new Uri("/Nim;component/Matchstick5.png", UriKind.Relative);
+                BitmapImage imageBitmap = new BitmapImage(imageUri);
+                img = new Image()
+                {
+                    Source = imageBitmap,
+                };
                 img.MouseDown += window.ToggleSelected;
                 row3.Children.Add(img);
             }

@@ -12,13 +12,15 @@ namespace NimLibrary
     public class GameController
     {
         // Access modifier set to internal to let unit tests view fields.
-        internal Player player1;
-        internal Player player2;
+        public Player player1;
+        public Player player2;
         internal Pile pile1 = new Pile();
         internal Pile pile2 = new Pile();
         internal Pile pile3 = new Pile();
         internal Pile pile4 = new Pile();
-        internal List<Pile> Piles = new List<Pile>(); 
+        internal List<Pile> Piles = new List<Pile>();
+        public bool isOver { get; set; }
+        public object CurrentPlayer { get; set; }
 
         public GameController(string mode, string difficulty, string name1, string name2)
         {
@@ -30,6 +32,8 @@ namespace NimLibrary
             {
                 player2 = new Player(name2, false);
             }
+
+            CurrentPlayer = player1;
 
             switch (difficulty) {
                 case "Easy":
@@ -74,11 +78,11 @@ namespace NimLibrary
 
 
 
-        public void TakeTurn()
+        public bool TakeTurn()
         {
             //Check that at least one piece is selected
             if (SelectedCount() == 0) {
-                return;
+                return false;
             }
 
             //Remove selected pieces
@@ -95,14 +99,15 @@ namespace NimLibrary
             }
 
             if (GameOver()) {
-                //TODO: Notify user
-                return;
+                isOver = true;
+                return true;
             }
 
-            //TODO: Change players
-            
+            CurrentPlayer = (CurrentPlayer == player1) ? player2 : player1;
+
             //Computer's turn
             if (player2.IsComputer /* && currentPlayer == player2*/) {
+                CurrentPlayer = (CurrentPlayer == player1) ? player2 : player1;
                 //Select pieces
                 RandomComp();
                 
@@ -120,22 +125,22 @@ namespace NimLibrary
                 }
 
                 if (GameOver()) {
-                    //TODO: Notify user
-                    return;
+                    isOver = true;
+                    return true;
                 }
 
-                //TODO: Change players
             }
+            return true;
         }
 
 
         private bool GameOver() {
             foreach (Pile pile in Piles) {
-                if (pile.Count == 0) {
-                    return true;
+                if (pile.Count != 0) {
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         private int SelectedCount() {

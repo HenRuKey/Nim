@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Nim.Models {
-    class Player {
+    public class Player {
         public readonly string Name;
         public readonly bool IsComputer;
 

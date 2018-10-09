@@ -3,7 +3,9 @@ using Nim.UserControls;
 using NimLibrary;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,20 +34,23 @@ namespace Nim
         GameController game;
         TitleScreen titleScreen = new TitleScreen();
         NameSelect nameSelect = new NameSelect();
+        GameOverUC GameOver = new GameOverUC();
         EasyGameModeUC easyGame = new EasyGameModeUC();
         MediumGameModeUC mediumGame = new MediumGameModeUC();
         HardGameModeUC hardGame = new HardGameModeUC();
-        
 
+        
         public MainWindow()
         {
             InitializeComponent();
             mainWindow.Children.Add(titleScreen);
             mainWindow.Children.Add(nameSelect);
+            mainWindow.Children.Add(GameOver);
             mainWindow.Children.Add(easyGame);
             mainWindow.Children.Add(mediumGame);
             mainWindow.Children.Add(hardGame);
             nameSelect.Visibility = Visibility.Hidden;
+            GameOver.Visibility = Visibility.Hidden;
             easyGame.Visibility = Visibility.Hidden;
             mediumGame.Visibility = Visibility.Hidden;
             hardGame.Visibility = Visibility.Hidden;
@@ -121,25 +126,29 @@ namespace Nim
             easyGame.Visibility = Visibility.Hidden;
             mediumGame.Visibility = Visibility.Hidden;
             hardGame.Visibility = Visibility.Hidden;
+            GameOver.Visibility = Visibility.Hidden;
         }
 
         internal void Go()
         {
-            game = new GameController(Mode, Difficulty, nameSelect.Player1.Content.ToString(), nameSelect.Player2.Content.ToString());
+            game = new GameController(Mode, Difficulty, nameSelect.Player1.Text.ToString(), nameSelect.Player2.Text.ToString());
             nameSelect.Visibility = Visibility.Hidden;
             switch (Difficulty)
             {
                 case "Easy":
+                    easyGame.lb_name.Content = game.player1.Name;
                     easyGame.Visibility = Visibility.Visible;
                     easyGame.Piles = game.getPiles();
                     easyGame.UpdateView();
                     break;
                 case "Medium":
+                    mediumGame.lb_name.Content = game.player1.Name;
                     mediumGame.Visibility = Visibility.Visible;
                     mediumGame.Piles = game.getPiles();
                     mediumGame.UpdateView();
                     break;
                 case "Hard":
+                    hardGame.lb_name.Content = game.player1.Name;
                     hardGame.Visibility = Visibility.Visible;
                     hardGame.Piles = game.getPiles();
                     hardGame.UpdateView();
@@ -151,10 +160,19 @@ namespace Nim
         {
             Image img = (Image)sender;
             UniformGrid row = (UniformGrid)img.Parent;
-            
+
             switch (row.Name)
             {
                 case "row1":
+                    if (CheckRows(0))
+                    {
+                        img.RenderTransformOrigin = new Point(0.5, 0.5);
+                        RotateTransform rotateTransform = new RotateTransform(15);
+                        img.RenderTransform = rotateTransform;
+                        game.SelectPiece(0);
+                    }
+                    break;
+                case "row2":
                     if (CheckRows(1))
                     {
                         img.RenderTransformOrigin = new Point(0.5, 0.5);
@@ -163,7 +181,7 @@ namespace Nim
                         game.SelectPiece(1);
                     }
                     break;
-                case "row2":
+                case "row3":
                     if (CheckRows(2))
                     {
                         img.RenderTransformOrigin = new Point(0.5, 0.5);
@@ -172,7 +190,7 @@ namespace Nim
                         game.SelectPiece(2);
                     }
                     break;
-                case "row3":
+                case "row4":
                     if (CheckRows(3))
                     {
                         img.RenderTransformOrigin = new Point(0.5, 0.5);
@@ -181,16 +199,12 @@ namespace Nim
                         game.SelectPiece(3);
                     }
                     break;
-                case "row4":
-                    if (CheckRows(4))
-                    {
-                        img.RenderTransformOrigin = new Point(0.5, 0.5);
-                        RotateTransform rotateTransform = new RotateTransform(15);
-                        img.RenderTransform = rotateTransform;
-                        game.SelectPiece(4);
-                    }
-                    break;
             }
+        }
+
+        private object GetRoutedEventHandlers(object b, RoutedEvent clickEvent)
+        {
+            throw new NotImplementedException();
         }
 
         internal bool CheckRows(int index)
@@ -212,8 +226,36 @@ namespace Nim
 
         internal void EndTurn()
         {
-            game.TakeTurn();
-            easyGame.UpdateView();
+            if (game.TakeTurn())
+            {
+                easyGame.lb_name.Content = ((string)easyGame.lb_name.Content == game.player1.Name) ? game.player2.Name : game.player1.Name;
+                mediumGame.lb_name.Content = ((string)mediumGame.lb_name.Content == game.player1.Name) ? game.player2.Name : game.player1.Name;
+                hardGame.lb_name.Content = ((string)hardGame.lb_name.Content == game.player1.Name) ? game.player2.Name : game.player1.Name;
+            }
+            switch (Difficulty)
+            {
+                case "Easy":
+                    easyGame.Piles = game.getPiles();
+                    easyGame.UpdateView();
+                    break;
+                case "Medium":
+                    mediumGame.Piles = game.getPiles();
+                    mediumGame.UpdateView();
+                    break;
+                case "Hard":
+                    hardGame.Piles = game.getPiles();
+                    hardGame.UpdateView();
+                    break;
+            }
+            if (game.isOver)
+            {
+                nameSelect.Visibility = Visibility.Hidden;
+                easyGame.Visibility = Visibility.Hidden;
+                mediumGame.Visibility = Visibility.Hidden;
+                hardGame.Visibility = Visibility.Hidden;
+                GameOver.lb_loser.Content = $"{game.CurrentPlayer} loses!";
+                GameOver.Visibility = Visibility.Visible;
+            }
         }
     }
 }

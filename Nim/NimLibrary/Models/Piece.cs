@@ -13,15 +13,5 @@ namespace Nim.Models {
         public bool IsSelected { get; set; }
 
         public Image img;
-
-        public Piece()
-        {
-            Uri imageUri = new Uri("/Nim;component/Matchstick5.png", UriKind.Relative);
-            BitmapImage imageBitmap = new BitmapImage(imageUri);
-            img = new Image()
-            {
-                Source = imageBitmap,
-            };
-        }
     }
 }

@@ -8,11 +8,11 @@
              d:DesignHeight="768" d:DesignWidth="1024">
     <Grid>
         <Label Content="Nim" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="429,46,0,0" FontFamily="Adumu" FontSize="110"/>
-        <Label Name="Player1" Content="Player 1 Name:" HorizontalAlignment="Left" Margin="389,215,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
+        <Label Content="Player 1 Name:" HorizontalAlignment="Left" Margin="389,215,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
         <Button Content="X" HorizontalAlignment="Left" Margin="959,10,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="Button_Close"/>
-        <Label Name="Player2" Content="Player 2/Computer Name:" HorizontalAlignment="Left" Margin="289,386,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="332,286,0,0" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" Width="377" FontFamily="Adumu Inline" FontSize="24" Background="#6a7790" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="332,461,0,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Width="377" FontFamily="Adumu Inline" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <Label Content="Player 2/Computer Name:" HorizontalAlignment="Left" Margin="289,386,0,0" VerticalAlignment="Top" FontFamily="Adumu" FontSize="35"/>
+        <TextBox Name="Player1"  HorizontalAlignment="Left" Height="56" Margin="332,286,0,0" TextWrapping="Wrap" Text="Player 1" VerticalAlignment="Top" Width="377" FontFamily="Adumu Inline" FontSize="24" Background="#6a7790" Foreground="White"/>
+        <TextBox Name="Player2" HorizontalAlignment="Left" Height="56" Margin="332,461,0,0" TextWrapping="Wrap" Text="Player 2" VerticalAlignment="Top" Width="377" FontFamily="Adumu Inline" FontSize="24" Background="#6a7790" Foreground="White"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="339,604,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Back_Click"/>
         <Button Content="Go" HorizontalAlignment="Left" Margin="522,604,0,0" VerticalAlignment="Top" Width="170" Height="50" RenderTransformOrigin="-0.056,-1.5" FontFamily="Adumu" FontSize="24" Background="#6a7790" Foreground="White" Click="btn_Go_Click"/>
 
